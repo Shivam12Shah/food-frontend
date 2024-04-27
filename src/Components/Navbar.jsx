@@ -4,9 +4,9 @@ import { NavLink } from 'react-router-dom'
 
 const Navbar = () => {
   return (
-    <div className='navbar w-full flex items-center justify-between px-20 py-4'>
-        <img src={assets.logo} alt="" />
-        <ul className='min-w-fit navbarmenu flex gap-5 font-medium '>
+    <div className='navbar flex items-center justify-between px-20 py-4 max-[600px]:px-2 '>
+        <img className='max-[600px]:w-[100px]' src={assets.logo} alt="" />
+        <ul className=' navbarmenu flex gap-5 font-medium max-[600px]:hidden'>
             <NavLink>Home</NavLink>
             <NavLink>Menu</NavLink>
             <NavLink>Mobile-App</NavLink>

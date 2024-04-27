@@ -8,7 +8,7 @@ const Home = () => {
   
   const [category , setcategory] = useState("All")
   return (
-    <div className='px-20'>
+    <div>
       <Header/>
       <Explore category={category} setcategory={setcategory}/>
       <Display category={category}/>
