@@ -7,7 +7,7 @@ const Explore = ({category , setcategory}) => {
 
   
   return (
-    <div className='explore menu my-5 w-full px-20 max-sm:px-4'>
+    <div id='explore' className='explore menu my-5 w-full px-20 max-sm:px-4'>
       <h1 className='text-4xl font-semibold max-sm:text-xl'>Explore Our Menu</h1>
       <p className='leading-[18px] my-4 max-sm:hidden'>Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex, quaerat eius impedit, veritatis quos voluptatum ad vel nihil vero, dolore ipsum minima autem eos modi corrupti totam ducimus dolor distinctio? adipisicing elit. Provident, perferendis?</p>
 

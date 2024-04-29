@@ -19,12 +19,25 @@ const Context = (props) => {
     setcartitem((prev)=>({...prev,[itemid]:prev[itemid]-1}))
 
   }
+
+  const getitemtotal = ()=>{
+    let totalprice = 0;
+    for(const items in cartitem){
+      if(cartitem[items]>0){
+        let iteminfo = foodlist.find((product)=> product._id===items);
+        totalprice += iteminfo.price * cartitem[items];
+      }
+    }
+    return totalprice;
+    }
   useEffect(()=>{
-    console.log(cartitem,"this is cart item");
+    
   },[cartitem])
 
   const [foodlist, setfoodlist] = useState(food_list);
   const addtocartvalue = {
+    getitemtotal,
+    foodlist,
     cartitem,
     setcartitem,
     addtocart,
