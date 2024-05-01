@@ -5,7 +5,7 @@ const Loginpopup = ({setshowlogin,showlogin}) => {
     const [currstate,  setcurrstate] = useState("Login")
   return (
     <div className='w-full h-[100vh] bg-zinc-600 bg-opacity-50 absolute z-50 flex items-center justify-center'>
-      <form className=' w-1/4 h-fit bg-white p-6 rounded-md' >
+      <form className=' w-[350px]  h-fit bg-white p-6 rounded-md' >
         <div className="div flex items-center justify-between">
         {
             currstate

@@ -6,6 +6,8 @@
   padding: 0;
   box-sizing: border-box;
   font-family: gilroy;
+  scroll-behavior: smooth;
+
 }
 
 ::-webkit-scrollbar{
@@ -26,7 +28,7 @@
 .header-content{
   margin-top: 1rem;
   border-radius: 50px;
-  background-image: url(header_img.png);
+  background-image: url(https://images.template.net/108161/food-table-background-igjcd.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

@@ -1,10 +1,13 @@
 import React, { useContext, useState } from "react";
 import { addtocartContext } from "../Context/Context";
 import { food_list } from "../assets/assets";
+import { Link, useNavigate } from "react-router-dom";
 
 const Cart = () => {
-  const { foodlist, cartitem, removefromCart ,getitemtotal } =
+  const { cartitem, removefromCart ,getitemtotal } =
     useContext(addtocartContext);
+
+    const navigate = useNavigate()
 
   return (
     <div className="px-20 my-28 ">
@@ -33,7 +36,7 @@ const Cart = () => {
                     />
                     <p className= "titile-p col-start-2 row-start-1  -ml-20">{items.name}</p>
                     <p className=" ">₹ {items.price}</p>
-                    <p className="">₹ {cartitem[items._id]}</p>
+                    <p className=""> {cartitem[items._id]}</p>
                     <p className="">₹ {items.price * cartitem[items._id]}</p>
                     <p
                       onClick={() => removefromCart(items._id)}
@@ -62,8 +65,8 @@ const Cart = () => {
             </div>
             <hr />
             <div className="total-detals  flex justify-between py-1">
-              <p>delivery Free</p>
-              <p>₹ {getitemtotal()===0? getitemtotal() : getitemtotal()+20}</p>
+              <p>delivery Fee</p>
+              <p>₹{getitemtotal() >0 ?20:0}</p>
             </div>
             <hr />
             <div className="total-detals  flex justify-between py-1">
@@ -71,7 +74,7 @@ const Cart = () => {
               <p>₹ {getitemtotal()===0? getitemtotal() : getitemtotal()+20}</p>
             </div>
             <hr />
-            <button className="bg-green-600 px-4 py-1 mt-3 rounded-md text-white">Check Out</button>
+           <button onClick={()=> navigate("/placeOrder")} className="bg-green-600 px-4 py-1 mt-3 rounded-md text-white">Check Out</button> 
 
           </div>
         </div>

@@ -5,7 +5,7 @@ export const usercontext = createContext(null);
 export const addtocartContext = createContext(null);
 
 const Context = (props) => {
-  const [cartitem, setcartitem] = useState({});
+  const [cartitem, setcartitem] = useState([]);
 
   const addtocart = (itemid)=>{
     if(!cartitem[itemid]){
@@ -30,6 +30,7 @@ const Context = (props) => {
     }
     return totalprice;
     }
+
   useEffect(()=>{
     
   },[cartitem])
