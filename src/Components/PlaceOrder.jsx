@@ -9,8 +9,8 @@ const PlaceOrder = () => {
 
   return (
     <div>
-     <form className='place order px-20 my-10 flex gap-10'>
-      <div className="placeoider-left w-1/2 ">
+     <form className='place order px-20 my-10 flex gap-10 max-sm:px-4 max-sm:flex-col'>
+      <div className="placeoider-left w-1/2 max-sm:w-full">
         <p className='text-xl font-semibold'>Delivery Information</p>
         <div className="multifield flex gap-2 my-1 ">
           <input className='bg-zinc-50 px-3 py-1 rounded w-full border' type="text" placeholder='First Name' />
@@ -32,7 +32,7 @@ const PlaceOrder = () => {
         <input className='bg-zinc-50 px-3 py-1 rounded w-full border ' type="text" placeholder=' phone' />
       </div>
 
-      <div className="placeoider-right w-1/2">
+      <div className="placeoider-right w-1/2 max-sm:w-full">
       <div className="cart-tatal">
           <h2 className="text-xl font-semibold mb-3">Cart Total</h2>
           <div className="div">
