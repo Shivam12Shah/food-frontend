@@ -1,6 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: fac;
+  src: url(gilroy);
+}e
+
 *{
   margin: 0;
   padding: 0;
@@ -27,7 +33,8 @@
 
 .header-content{
   margin-top: 1rem;
-  border-radius: 50px;
+  /* border-radius: ; */
+  border-radius: 10px;
   background-image: url(https://images.template.net/108161/food-table-background-igjcd.png);
   background-position: center;
   background-size: cover;
